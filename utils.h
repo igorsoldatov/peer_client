@@ -30,10 +30,15 @@ using namespace std;
 typedef boost::asio::ip::address IpAddress;
 typedef boost::asio::ip::address_v4 Ipv4Address;
 
-typedef boost::asio::ip::tcp Tcp;
-typedef Tcp::socket tcp_socket;
-typedef Tcp::endpoint tcp_endpoint;
-typedef Tcp::acceptor tcp_acceptor;
+typedef boost::asio::ip::tcp tcp;
+typedef tcp::socket tcp_socket;
+typedef tcp::endpoint tcp_endpoint;
+typedef tcp::acceptor tcp_acceptor;
+
+typedef boost::asio::local::stream_protocol stream_protocol;
+typedef stream_protocol::socket unix_socket;
+typedef stream_protocol::endpoint unix_endpoint;
+typedef stream_protocol::acceptor unix_acceptor;
 
 typedef boost::thread Thread;
 

@@ -1,6 +1,6 @@
 
 cmake_minimum_required(VERSION 3.9)
-PROJECT(peer_client)
+PROJECT(node)
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_FLAGS "-pthread")
@@ -15,7 +15,7 @@ ENDIF(Boost_FOUND)
 
 SET(USED_LIBS ${Boost_SYSTEM_LIBRARY} ${Boost_THREAD_LIBRARY} ${Boost_REGEX_LIBRARY})
 
-ADD_EXECUTABLE(peer_client main.cpp peer_client.cpp peer_client.h handlers.cpp msg_formats.h msg_builder.cpp msg_builder.h
+ADD_EXECUTABLE(node main.cpp node.cpp node.h handlers.cpp msg_formats.h msg_builder.cpp msg_builder.h
         peer.cpp peer.h utils.h)
-TARGET_LINK_LIBRARIES(peer_client ${USED_LIBS})
+TARGET_LINK_LIBRARIES(node ${USED_LIBS})
 
